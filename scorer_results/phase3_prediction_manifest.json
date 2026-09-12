@@ -1,0 +1,36 @@
+{
+  "training_file": "D:\\freight-rate-ml-assessment\\data\\train-test.csv",
+  "training_rows": 48000,
+  "training_date_min": "2025-01-01",
+  "training_date_max": "2025-10-31",
+  "model": "HistGradientBoostingRegressor",
+  "actual_iterations": 152,
+  "validation_output": "D:\\freight-rate-ml-assessment\\validation_predictions.csv",
+  "validation_statistics": {
+    "count": 12000,
+    "missing": 0,
+    "nonfinite": 0,
+    "minimum": 266.1907761736155,
+    "maximum": 6707.753856122251,
+    "mean": 2351.2604273333845,
+    "median": 2033.0860569191623
+  },
+  "december_output": "D:\\freight-rate-ml-assessment\\december_predictions.csv",
+  "december_statistics": {
+    "count": 31,
+    "missing": 0,
+    "nonfinite": 0,
+    "minimum": 861.9850539050782,
+    "maximum": 861.9850539050782,
+    "mean": 861.9850539050783,
+    "median": 861.9850539050782
+  },
+  "december_fallback": {
+    "coordinates": "exact city mappings learned from development data",
+    "market_index": "missing; training-fitted median imputation",
+    "quote_signal": "missing; training-fitted median imputation"
+  },
+  "reproducibility_max_absolute_difference": 0.0,
+  "validation_output_sha256": "bb5e321d46b0011fd85e9cbe80a597119cac5881defcf38a135b0083389c24e6",
+  "december_output_sha256": "e07f755faa273419ba9b264fdc53d2efce224a236a3ae6e38b776626d4763a10"
+}

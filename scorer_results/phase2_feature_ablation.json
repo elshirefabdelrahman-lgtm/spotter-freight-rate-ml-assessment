@@ -1,0 +1,143 @@
+{
+  "selection_scope": "July-September only; October not evaluated",
+  "results": [
+    {
+      "label": "HGB compact raw features",
+      "model": "hist_gradient_boosting",
+      "feature_set": "raw",
+      "include_route": false,
+      "overrides": {
+        "learning_rate": 0.05,
+        "max_iter": 220,
+        "max_leaf_nodes": 15,
+        "min_samples_leaf": 100,
+        "l2_regularization": 10.0
+      },
+      "backtest_folds": [
+        {
+          "fold": "2025-07",
+          "train_mae": 109.74099044776254,
+          "train_rmse": 551.004553429849,
+          "validation_mae": 112.15687146038704,
+          "validation_rmse": 631.3073078684581,
+          "mae_gap": 2.415881012624496,
+          "rmse_gap": 80.3027544386091
+        },
+        {
+          "fold": "2025-08",
+          "train_mae": 108.40397954338975,
+          "train_rmse": 561.5937809877859,
+          "validation_mae": 114.00510552007036,
+          "validation_rmse": 617.4344933654686,
+          "mae_gap": 5.601125976680606,
+          "rmse_gap": 55.840712377682735
+        },
+        {
+          "fold": "2025-09",
+          "train_mae": 111.59390892354214,
+          "train_rmse": 570.0598373559613,
+          "validation_mae": 130.82492586116652,
+          "validation_rmse": 622.9001098179159,
+          "mae_gap": 19.231016937624375,
+          "rmse_gap": 52.840272461954555
+        }
+      ],
+      "backtest_mean_validation_mae": 118.9956342805413,
+      "backtest_std_validation_mae": 8.398535458020099,
+      "backtest_mean_validation_rmse": 623.880637017281,
+      "elapsed_seconds": 10.289902100004838
+    },
+    {
+      "label": "HGB compact engineered",
+      "model": "hist_gradient_boosting",
+      "feature_set": "engineered",
+      "include_route": false,
+      "overrides": {
+        "learning_rate": 0.05,
+        "max_iter": 220,
+        "max_leaf_nodes": 15,
+        "min_samples_leaf": 100,
+        "l2_regularization": 10.0
+      },
+      "backtest_folds": [
+        {
+          "fold": "2025-07",
+          "train_mae": 113.33789601040654,
+          "train_rmse": 551.3533360941948,
+          "validation_mae": 161.80056202018253,
+          "validation_rmse": 642.8433415909182,
+          "mae_gap": 48.46266600977599,
+          "rmse_gap": 91.49000549672337
+        },
+        {
+          "fold": "2025-08",
+          "train_mae": 109.41894279831857,
+          "train_rmse": 556.4551413371536,
+          "validation_mae": 131.74279240116044,
+          "validation_rmse": 621.9044993910414,
+          "mae_gap": 22.323849602841875,
+          "rmse_gap": 65.44935805388786
+        },
+        {
+          "fold": "2025-09",
+          "train_mae": 111.02781371369923,
+          "train_rmse": 565.1933415204938,
+          "validation_mae": 124.32460704062495,
+          "validation_rmse": 619.3722022952944,
+          "mae_gap": 13.296793326925723,
+          "rmse_gap": 54.17886077480057
+        }
+      ],
+      "backtest_mean_validation_mae": 139.28932048732267,
+      "backtest_std_validation_mae": 16.203381643428276,
+      "backtest_mean_validation_rmse": 628.0400144257513,
+      "elapsed_seconds": 10.498460999995586
+    },
+    {
+      "label": "HGB compact without market/quote signals",
+      "model": "hist_gradient_boosting",
+      "feature_set": "no_market_quote",
+      "include_route": false,
+      "overrides": {
+        "learning_rate": 0.05,
+        "max_iter": 220,
+        "max_leaf_nodes": 15,
+        "min_samples_leaf": 100,
+        "l2_regularization": 10.0
+      },
+      "backtest_folds": [
+        {
+          "fold": "2025-07",
+          "train_mae": 114.71061286449708,
+          "train_rmse": 550.932866100087,
+          "validation_mae": 201.76148858002588,
+          "validation_rmse": 651.9003017597171,
+          "mae_gap": 87.0508757155288,
+          "rmse_gap": 100.96743565963004
+        },
+        {
+          "fold": "2025-08",
+          "train_mae": 111.99476526802151,
+          "train_rmse": 559.4316659003949,
+          "validation_mae": 149.09112779024105,
+          "validation_rmse": 622.5770733688813,
+          "mae_gap": 37.096362522219536,
+          "rmse_gap": 63.14540746848638
+        },
+        {
+          "fold": "2025-09",
+          "train_mae": 112.96748815896356,
+          "train_rmse": 568.3041703217871,
+          "validation_mae": 123.87322397715424,
+          "validation_rmse": 615.2656103778459,
+          "mae_gap": 10.905735818190678,
+          "rmse_gap": 46.96144005605879
+        }
+      ],
+      "backtest_mean_validation_mae": 158.24194678247372,
+      "backtest_std_validation_mae": 32.449433039558556,
+      "backtest_mean_validation_rmse": 629.9143285021481,
+      "elapsed_seconds": 10.21488070000487
+    }
+  ]
+}

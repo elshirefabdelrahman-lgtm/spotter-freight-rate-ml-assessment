@@ -1,0 +1,143 @@
+{
+  "selection_scope": "July-September only; October not evaluated",
+  "results": [
+    {
+      "label": "HGB compact",
+      "model": "hist_gradient_boosting",
+      "feature_set": "engineered",
+      "include_route": false,
+      "overrides": {
+        "learning_rate": 0.05,
+        "max_iter": 220,
+        "max_leaf_nodes": 15,
+        "min_samples_leaf": 100,
+        "l2_regularization": 10.0
+      },
+      "backtest_folds": [
+        {
+          "fold": "2025-07",
+          "train_mae": 113.33789601040654,
+          "train_rmse": 551.3533360941948,
+          "validation_mae": 161.80056202018253,
+          "validation_rmse": 642.8433415909182,
+          "mae_gap": 48.46266600977599,
+          "rmse_gap": 91.49000549672337
+        },
+        {
+          "fold": "2025-08",
+          "train_mae": 109.41894279831857,
+          "train_rmse": 556.4551413371536,
+          "validation_mae": 131.74279240116044,
+          "validation_rmse": 621.9044993910414,
+          "mae_gap": 22.323849602841875,
+          "rmse_gap": 65.44935805388786
+        },
+        {
+          "fold": "2025-09",
+          "train_mae": 111.02781371369923,
+          "train_rmse": 565.1933415204938,
+          "validation_mae": 124.32460704062495,
+          "validation_rmse": 619.3722022952944,
+          "mae_gap": 13.296793326925723,
+          "rmse_gap": 54.17886077480057
+        }
+      ],
+      "backtest_mean_validation_mae": 139.28932048732267,
+      "backtest_std_validation_mae": 16.203381643428276,
+      "backtest_mean_validation_rmse": 628.0400144257513,
+      "elapsed_seconds": 11.197715999995125
+    },
+    {
+      "label": "HGB reference",
+      "model": "hist_gradient_boosting",
+      "feature_set": "engineered",
+      "include_route": false,
+      "overrides": {
+        "learning_rate": 0.05,
+        "max_iter": 250,
+        "max_leaf_nodes": 31,
+        "min_samples_leaf": 50,
+        "l2_regularization": 5.0
+      },
+      "backtest_folds": [
+        {
+          "fold": "2025-07",
+          "train_mae": 111.98105515628511,
+          "train_rmse": 533.9541190860705,
+          "validation_mae": 171.34618563003818,
+          "validation_rmse": 651.7168919064188,
+          "mae_gap": 59.36513047375307,
+          "rmse_gap": 117.76277282034835
+        },
+        {
+          "fold": "2025-08",
+          "train_mae": 111.58621009456166,
+          "train_rmse": 541.6677900262289,
+          "validation_mae": 152.41226425709485,
+          "validation_rmse": 630.7329000184266,
+          "mae_gap": 40.82605416253318,
+          "rmse_gap": 89.06510999219768
+        },
+        {
+          "fold": "2025-09",
+          "train_mae": 112.91091422396828,
+          "train_rmse": 549.435689893396,
+          "validation_mae": 123.81101442597499,
+          "validation_rmse": 619.4056333133447,
+          "mae_gap": 10.900100202006712,
+          "rmse_gap": 69.96994341994866
+        }
+      ],
+      "backtest_mean_validation_mae": 149.18982143770265,
+      "backtest_std_validation_mae": 19.53946823983172,
+      "backtest_mean_validation_rmse": 633.95180841273,
+      "elapsed_seconds": 12.652236900001299
+    },
+    {
+      "label": "HGB regularized",
+      "model": "hist_gradient_boosting",
+      "feature_set": "engineered",
+      "include_route": false,
+      "overrides": {
+        "learning_rate": 0.05,
+        "max_iter": 300,
+        "max_leaf_nodes": 31,
+        "min_samples_leaf": 100,
+        "l2_regularization": 10.0
+      },
+      "backtest_folds": [
+        {
+          "fold": "2025-07",
+          "train_mae": 108.43779572543451,
+          "train_rmse": 540.6091663205598,
+          "validation_mae": 171.34374506242114,
+          "validation_rmse": 646.581656991297,
+          "mae_gap": 62.90594933698662,
+          "rmse_gap": 105.97249067073722
+        },
+        {
+          "fold": "2025-08",
+          "train_mae": 108.81851340549987,
+          "train_rmse": 547.1345069715245,
+          "validation_mae": 151.09451638512746,
+          "validation_rmse": 627.3828634934239,
+          "mae_gap": 42.27600297962759,
+          "rmse_gap": 80.24835652189938
+        },
+        {
+          "fold": "2025-09",
+          "train_mae": 110.45455099163073,
+          "train_rmse": 554.326980979579,
+          "validation_mae": 122.78320144099139,
+          "validation_rmse": 617.8820876861496,
+          "mae_gap": 12.328650449360666,
+          "rmse_gap": 63.55510670657054
+        }
+      ],
+      "backtest_mean_validation_mae": 148.40715429617998,
+      "backtest_std_validation_mae": 19.915622602202344,
+      "backtest_mean_validation_rmse": 630.6155360569568,
+      "elapsed_seconds": 13.251564100006362
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "selection_rule": "Selected on July-September backtests before October evaluation",
+  "result": {
+    "label": "Selected HGB compact raw features",
+    "model": "hist_gradient_boosting",
+    "feature_set": "raw",
+    "include_route": false,
+    "overrides": {
+      "learning_rate": 0.05,
+      "max_iter": 220,
+      "max_leaf_nodes": 15,
+      "min_samples_leaf": 100,
+      "l2_regularization": 10.0
+    },
+    "backtest_folds": [
+      {
+        "fold": "2025-07",
+        "train_mae": 109.74099044776254,
+        "train_rmse": 551.004553429849,
+        "validation_mae": 112.15687146038704,
+        "validation_rmse": 631.3073078684581,
+        "mae_gap": 2.415881012624496,
+        "rmse_gap": 80.3027544386091
+      },
+      {
+        "fold": "2025-08",
+        "train_mae": 108.40397954338975,
+        "train_rmse": 561.5937809877859,
+        "validation_mae": 114.00510552007036,
+        "validation_rmse": 617.4344933654686,
+        "mae_gap": 5.601125976680606,
+        "rmse_gap": 55.840712377682735
+      },
+      {
+        "fold": "2025-09",
+        "train_mae": 111.59390892354214,
+        "train_rmse": 570.0598373559613,
+        "validation_mae": 130.82492586116652,
+        "validation_rmse": 622.9001098179159,
+        "mae_gap": 19.231016937624375,
+        "rmse_gap": 52.840272461954555
+      }
+    ],
+    "backtest_mean_validation_mae": 118.9956342805413,
+    "backtest_std_validation_mae": 8.398535458020099,
+    "backtest_mean_validation_rmse": 623.880637017281,
+    "october": {
+      "train_mae": 113.37914167324652,
+      "train_rmse": 574.2104679464239,
+      "validation_mae": 121.89127460633962,
+      "validation_rmse": 652.3450442547527,
+      "mae_gap": 8.512132933093099,
+      "rmse_gap": 78.13457630832875
+    },
+    "elapsed_seconds": 11.12618309998652
+  }
+}

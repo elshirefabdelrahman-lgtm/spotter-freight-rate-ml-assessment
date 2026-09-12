@@ -1,0 +1,199 @@
+{
+  "selection_method": "July-September expanding monthly backtests; October final holdout",
+  "development_fit_rows": 43147,
+  "october_rows": 4853,
+  "results": [
+    {
+      "label": "Median baseline",
+      "model": "median_baseline",
+      "feature_set": "none",
+      "include_route": null,
+      "overrides": {},
+      "backtest_folds": [
+        {
+          "fold": "2025-07",
+          "train_mae": 1123.4542248142748,
+          "train_rmse": 1511.332426081536,
+          "validation_mae": 1144.3714393322475,
+          "validation_rmse": 1555.0789634572764,
+          "mae_gap": 20.917214517972752,
+          "rmse_gap": 43.746537375740445
+        },
+        {
+          "fold": "2025-08",
+          "train_mae": 1126.4954496114835,
+          "train_rmse": 1516.812632717937,
+          "validation_mae": 1111.351385795335,
+          "validation_rmse": 1507.3191458920437,
+          "mae_gap": -15.144063816148446,
+          "rmse_gap": -9.493486825893342
+        },
+        {
+          "fold": "2025-09",
+          "train_mae": 1124.6219078930271,
+          "train_rmse": 1515.8848013504578,
+          "validation_mae": 1151.1144625267668,
+          "validation_rmse": 1570.0829291771606,
+          "mae_gap": 26.4925546337397,
+          "rmse_gap": 54.19812782670283
+        }
+      ],
+      "backtest_mean_validation_mae": 1135.6124292181166,
+      "backtest_std_validation_mae": 17.374612924648027,
+      "backtest_mean_validation_rmse": 1544.1603461754937,
+      "october": {
+        "train_mae": 1127.4857313370571,
+        "train_rmse": 1521.0128259451205,
+        "validation_mae": 1146.7937069853701,
+        "validation_rmse": 1567.9704854490194,
+        "mae_gap": 19.307975648313004,
+        "rmse_gap": 46.95765950389887
+      },
+      "elapsed_seconds": 0.0
+    },
+    {
+      "label": "Ridge engineered + route",
+      "model": "ridge",
+      "feature_set": "engineered",
+      "include_route": true,
+      "overrides": {},
+      "backtest_folds": [
+        {
+          "fold": "2025-07",
+          "train_mae": 130.02786384777204,
+          "train_rmse": 568.2899849983344,
+          "validation_mae": 269.6491171928174,
+          "validation_rmse": 661.7626579514019,
+          "mae_gap": 139.62125334504537,
+          "rmse_gap": 93.47267295306756
+        },
+        {
+          "fold": "2025-08",
+          "train_mae": 132.67848814986553,
+          "train_rmse": 577.7287769492833,
+          "validation_mae": 136.57624499819994,
+          "validation_rmse": 617.3860827338581,
+          "mae_gap": 3.89775684833441,
+          "rmse_gap": 39.65730578457476
+        },
+        {
+          "fold": "2025-09",
+          "train_mae": 131.4990737649973,
+          "train_rmse": 582.0395321717617,
+          "validation_mae": 149.56277149445282,
+          "validation_rmse": 629.4783780672618,
+          "mae_gap": 18.063697729455527,
+          "rmse_gap": 47.438845895500094
+        }
+      ],
+      "backtest_mean_validation_mae": 185.26271122849005,
+      "backtest_std_validation_mae": 59.90526744392164,
+      "backtest_mean_validation_rmse": 636.2090395841739,
+      "october": {
+        "train_mae": 132.27393222623994,
+        "train_rmse": 585.5403562954247,
+        "validation_mae": 167.64638135768402,
+        "validation_rmse": 653.740508671385,
+        "mae_gap": 35.372449131444085,
+        "rmse_gap": 68.20015237596033
+      },
+      "elapsed_seconds": 3.7992579999990994
+    },
+    {
+      "label": "Random forest engineered",
+      "model": "random_forest",
+      "feature_set": "engineered",
+      "include_route": false,
+      "overrides": {},
+      "backtest_folds": [
+        {
+          "fold": "2025-07",
+          "train_mae": 84.49362155906924,
+          "train_rmse": 503.6930194783895,
+          "validation_mae": 165.19718193462853,
+          "validation_rmse": 652.6481563799601,
+          "mae_gap": 80.70356037555929,
+          "rmse_gap": 148.95513690157065
+        },
+        {
+          "fold": "2025-08",
+          "train_mae": 86.77588690573756,
+          "train_rmse": 511.89519003521326,
+          "validation_mae": 194.35029604169242,
+          "validation_rmse": 649.9648176104589,
+          "mae_gap": 107.57440913595485,
+          "rmse_gap": 138.06962757524565
+        },
+        {
+          "fold": "2025-09",
+          "train_mae": 89.5856921211837,
+          "train_rmse": 518.00584132694,
+          "validation_mae": 116.78057086187857,
+          "validation_rmse": 617.2319034803934,
+          "mae_gap": 27.194878740694875,
+          "rmse_gap": 99.22606215345343
+        }
+      ],
+      "backtest_mean_validation_mae": 158.77601627939984,
+      "backtest_std_validation_mae": 31.9915519306465,
+      "backtest_mean_validation_rmse": 639.9482924902708,
+      "october": {
+        "train_mae": 90.03952081774833,
+        "train_rmse": 521.8854559938015,
+        "validation_mae": 148.88346308599833,
+        "validation_rmse": 660.8309183524959,
+        "mae_gap": 58.843942268250004,
+        "rmse_gap": 138.94546235869439
+      },
+      "elapsed_seconds": 122.53309409999929
+    },
+    {
+      "label": "Histogram gradient boosting engineered",
+      "model": "hist_gradient_boosting",
+      "feature_set": "engineered",
+      "include_route": false,
+      "overrides": {},
+      "backtest_folds": [
+        {
+          "fold": "2025-07",
+          "train_mae": 111.98105515628511,
+          "train_rmse": 533.9541190860705,
+          "validation_mae": 171.34618563003818,
+          "validation_rmse": 651.7168919064188,
+          "mae_gap": 59.36513047375307,
+          "rmse_gap": 117.76277282034835
+        },
+        {
+          "fold": "2025-08",
+          "train_mae": 111.58621009456166,
+          "train_rmse": 541.6677900262289,
+          "validation_mae": 152.41226425709485,
+          "validation_rmse": 630.7329000184266,
+          "mae_gap": 40.82605416253318,
+          "rmse_gap": 89.06510999219768
+        },
+        {
+          "fold": "2025-09",
+          "train_mae": 112.91091422396828,
+          "train_rmse": 549.435689893396,
+          "validation_mae": 123.81101442597499,
+          "validation_rmse": 619.4056333133447,
+          "mae_gap": 10.900100202006712,
+          "rmse_gap": 69.96994341994866
+        }
+      ],
+      "backtest_mean_validation_mae": 149.18982143770265,
+      "backtest_std_validation_mae": 19.53946823983172,
+      "backtest_mean_validation_rmse": 633.95180841273,
+      "october": {
+        "train_mae": 113.91102186633063,
+        "train_rmse": 557.2671112396753,
+        "validation_mae": 154.85368289524212,
+        "validation_rmse": 655.2059722143671,
+        "mae_gap": 40.94266102891149,
+        "rmse_gap": 97.9388609746918
+      },
+      "elapsed_seconds": 18.40811190000386
+    }
+  ]
+}
